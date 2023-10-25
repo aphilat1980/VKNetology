@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBXhcEHP8UsRO0PD2I8Fq2gcDSVWwKqTrc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1033250362841</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Netology.VKNetology</string>
+	<key>PROJECT_ID</key>
+	<string>vknetology-55462</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vknetology-55462.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1033250362841:ios:2961f047dffe1f682ff5c8</string>
+</dict>
+</plist>
