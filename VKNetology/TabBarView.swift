@@ -21,31 +21,32 @@ struct TabBarView: View {
                     selectedIndex = 0
                 }
                 .tabItem {
-                    Label("Главная", image: "houseTab")
+                    Label("Посты", systemImage: "house")
                 }.tag(0)
             CurrentUserProfileView(user: user)
                 .onAppear{
                     selectedIndex = 1
                 }
                 .tabItem {
-                    Label("Профиль", image: "userTab")
+                    Label("Профиль", systemImage: "person")
                 }.tag(1)
             UploadPostView(user: user, tabIndex: $selectedIndex)
                 .onAppear{
                     selectedIndex = 2
                 }
                 .tabItem {
-                    Label("Добавить", systemImage: "plus.app")
+                    Label("Добавить пост", systemImage: "plus.app")
                 }.tag(2)
             
-            MainView()
+           /* MainView()
                 .onAppear{
                     selectedIndex = 3
                 }
                 .tabItem {
                     Label("Сохраненные", image: "likeTab")
-                }.tag(3)
+                }.tag(3)*/
         }
+        .accentColor(.black)
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         

@@ -6,14 +6,23 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileView: View {
     
     let user: User
     
-    var profilePosts: [Post] {
-        return postsDatabase.filter({$0.author.userName == user.userName})
+    //@StateObject var viewModel: ProfileViewViewModel
+    @StateObject var viewModel: CurrentUserProfileViewModel
+    
+    init (user: User) {
+        self.user = user
+        self._viewModel = StateObject(wrappedValue: CurrentUserProfileViewModel(user: user))
     }
+    
+    /*var profilePosts: [Post] {
+        return postsDatabase.filter({$0.author.userName == user.userName})
+    }*/
     
     var body: some View {
         
@@ -39,12 +48,8 @@ struct ProfileView: View {
                     HStack {
                         
                         //foto name and profession
-                        Image(user.userFoto ?? "")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 60, height: 60)
-                            .clipped()
-                            .cornerRadius(30)
+                        CircularProfileImageView(user: user, dimension: 60)
+                            
                         VStack (alignment: .leading) {
                             Text (user.userName)
                                 .fontWeight(.bold)
@@ -57,11 +62,6 @@ struct ProfileView: View {
                     .padding(.horizontal, 30)
                     .padding(.top, 20)
                     
-                    HStack {
-                        Image("orangeCircle")
-                        Text ("Подробная информация")
-                        
-                    }
                     
                     HStack {
                         
@@ -144,10 +144,10 @@ struct ProfileView: View {
                     
                     HStack{
                         Text ("Фотографии")
-                        Text ("15")
+                        Text ("\(user.userImages?.count ?? 0)")
                         Spacer()
                         NavigationLink {
-                            FotoView()
+                            FotoView(user: user)
                         } label: {
                             Image("nextLabel")
                         }
@@ -161,12 +161,24 @@ struct ProfileView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         
                         HStack {
-                            ForEach (0...10, id:\.self) { photo in
+                            /*ForEach (0...10, id:\.self) { photo in
                                 Image ("post1Foto")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 72, height: 66, alignment: .top)
                                     .cornerRadius(10)
+                                
+                            }*/
+                            if let images = user.userImages {
+                                
+                                ForEach (images, id: \.self) { imageUrl in
+                                    
+                                    KFImage(URL(string: imageUrl))
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 72, height: 66, alignment: .top)
+                                        //.cornerRadius(10)
+                                }
                                 
                             }
                             
@@ -174,7 +186,7 @@ struct ProfileView: View {
                         .padding(.leading, 30)
                     }
                     
-                    ForEach(profilePosts) {post in
+                    ForEach(viewModel.posts) {post in
                         
                         PostView(post: post)
                     }

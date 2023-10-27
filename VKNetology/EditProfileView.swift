@@ -35,9 +35,23 @@ struct EditProfileView: View {
                 Spacer()
                 
                 Button {
-                    Task {try await viewModel.updateUserData()
+                    /*Task {try await viewModel.updateUserData()
                         try await AuthService.shared.loadUserData()
-                        dismiss()
+                        dismiss()*/
+                    viewModel.updateUserImageData { success in
+                        if success {
+                            print ("success")
+                            AuthService.shared.loadUserImageData {success in
+                                if success {
+                                    dismiss()
+                                } else {
+                                    print ("dont load user data")
+                                }
+                            }
+                        } else {
+                            print ("failure")
+                            
+                    }
                     }
                 } label: {
                     Text ("Done")

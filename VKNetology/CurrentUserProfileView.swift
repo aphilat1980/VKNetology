@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CurrentUserProfileView: View {
     
@@ -38,14 +39,18 @@ struct CurrentUserProfileView: View {
                     
                     HStack {
                         //userID button
-                        Text (currentUser.userName)
+                        //Text (currentUser.userName)
                         Spacer()
                         Button {
                             
                             AuthService.shared.sighOut()
                             
                         } label: {
-                            Image("threeLineIcon")
+                    Text ("Выйти \nиз аккаунта")
+                                .foregroundColor(.black)
+                                .fontWeight(.bold)
+                                .font(.footnote)
+                            //Image("threeLineIcon")
                         }
                     }
                     .padding(.horizontal, 30)
@@ -53,19 +58,11 @@ struct CurrentUserProfileView: View {
                     
                     HStack {
                         
-                        //foto name and profession
-                        /*Image(currentUser.userFoto ?? "")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 60, height: 60)
-                            .clipped()
-                            .cornerRadius(30)*/
                         CircularProfileImageView(user: currentUser, dimension: 60)
                         VStack (alignment: .leading) {
                             Text (currentUser.userName)
                                 .fontWeight(.bold)
                             Text (currentUser.userProfession ?? "")
-                            
                             
                         }
                         Spacer()
@@ -73,11 +70,7 @@ struct CurrentUserProfileView: View {
                     .padding(.horizontal, 30)
                     .padding(.top, 20)
                     
-                    HStack {
-                        Image("orangeCircle")
-                        Text ("Подробная информация")
-                        
-                    }
+        
                     /*NavigationLink {
                         EditProfileView()
                     } label: {
@@ -100,7 +93,7 @@ struct CurrentUserProfileView: View {
                             .frame(width: 360, height: 35)
                             .foregroundColor(.white)
                             .background {
-                                Color.orange
+                                Color.gray
                             }
                             .cornerRadius(6)
                         
@@ -160,10 +153,10 @@ struct CurrentUserProfileView: View {
                     
                     HStack{
                         Text ("Фотографии")
-                        Text ("15")
+                        Text ("\(currentUser.userImages?.count ?? 0)")
                         Spacer()
                         NavigationLink {
-                            FotoView()
+                            FotoView(user: currentUser)
                         } label: {
                             Image("nextLabel")
                         }
@@ -177,12 +170,24 @@ struct CurrentUserProfileView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         
                         HStack {
-                            ForEach (0...15, id: \.self) { photo in
+                            /*ForEach (0...15, id: \.self) { photo in
                                 Image ("post1Foto")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 72, height: 66, alignment: .top)
                                     .cornerRadius(10)
+                                
+                            }*/
+                            if let images = currentUser.userImages {
+                                
+                                ForEach (images, id: \.self) { imageUrl in
+                                    
+                                    KFImage(URL(string: imageUrl))
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 72, height: 66, alignment: .top)
+                                        //.cornerRadius(10)
+                                }
                                 
                             }
                             

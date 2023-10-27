@@ -13,25 +13,23 @@ struct MainView: View {
     @StateObject var viewModel = FeedViewModel()
     
     var body: some View {
-        
-        ScrollView {
-            
-            LazyVStack {
-                
-                StoriesView()
-                
-                
-                ForEach(viewModel.posts) {post in
+        NavigationView{
+            ScrollView {
+                LazyVStack {
                     
-                    PostView(post: post)
+                    HStack{
+                        Text ("Пользователь:  ")
+                        Text (AuthService.shared.currentUser?.userName ?? "")
+                            .fontWeight(.bold)
+                    }
+                    //StoriesView()
                     
+                    ForEach(viewModel.posts) {post in
+                        PostView(post: post)
+                    }
                 }
-                
-                
-                
             }
         }
-       
     }
 }
 

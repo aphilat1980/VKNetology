@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "83E37447-5392-40D0-9E80-B9C9DD3DAFE9"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1311F99-188C-49BF-8E18-0AD7CCEB5CAF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKNetology/FotoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "updateUserData(completion:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "A1311F99-188C-49BF-8E18-0AD7CCEB5CAF - 8a06f23c626145f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKNetology.FotoViewModel.loadUser() async throws -&gt; ()"
+                  moduleName = "VKNetology"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrfilatov/Documents/VKNetology/VKNetology/FotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A1311F99-188C-49BF-8E18-0AD7CCEB5CAF - c81bd8c7bb223e1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for VKNetology.FotoViewModel.loadUser() async throws -&gt; ()"
+                  moduleName = "VKNetology"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrfilatov/Documents/VKNetology/VKNetology/FotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

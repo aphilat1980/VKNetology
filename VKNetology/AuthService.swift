@@ -55,10 +55,41 @@ class AuthService {
         guard let currentUid = userSession?.uid else {return}
         print ("loading...")
         let snapshot = try await Firestore.firestore().collection("users").document(currentUid).getDocument()
-        //print(snapshot.data())
         self.currentUser = try? snapshot.data(as: User.self)
+    
         
     }
+    
+    func loadUserImageData (completion: @escaping (_ success: Bool) -> Void) {
+        
+       /* self.userSession = Auth.auth().currentUser
+        guard let currentUid = userSession?.uid else {return}
+        print ("loading..image...")*/
+        
+        guard let currentUser else {return}
+        
+        Firestore.firestore().collection("users").document(currentUser.id).getDocument() {(doc, error) in
+            if let doc {
+                do {
+                    //self.currentUser = try doc.data(as: User.self)
+                    self.currentUser = try doc.data(as: User.self)
+                    //print (self.currentUser)
+                    completion(true)
+                } catch {
+                    //print(error.localizedDescription)
+                    completion(false)
+                }
+            } else {
+                //print(error?.localizedDescription)
+                completion(false)
+            }
+            
+            
+        }
+    
+        
+    }
+    
     
     func sighOut () {
         try? Auth.auth().signOut()
