@@ -45,6 +45,7 @@
 		17321AF72AD713AA00B83EF6 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17321AF62AD713AA00B83EF6 /* EditProfileViewModel.swift */; };
 		17764B962AE82C6000BA7EA0 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17764B952AE82C6000BA7EA0 /* PostService.swift */; };
 		17764B982AE833C500BA7EA0 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17764B972AE833C500BA7EA0 /* CurrentUserProfileViewModel.swift */; };
+		179F73C72AEBFBDC00FF001E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F73C62AEBFBDC00FF001E /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		17321AF62AD713AA00B83EF6 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		17764B952AE82C6000BA7EA0 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		17764B972AE833C500BA7EA0 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
+		179F73C62AEBFBDC00FF001E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				17764B952AE82C6000BA7EA0 /* PostService.swift */,
 				17321AC72ACB30F600B83EF6 /* TabBarView.swift */,
 				17321AE82AD43A1200B83EF6 /* AuthService.swift */,
+				179F73C62AEBFBDC00FF001E /* UserService.swift */,
 				1702B1922ADED53100025839 /* ImageUploader.swift */,
 				17321AC92ACC6B9C00B83EF6 /* Data.swift */,
 				170B0FFD2AE96FC2001A0EB8 /* ProfileViewViewModel.swift */,
@@ -272,6 +275,7 @@
 				17321AD22ACDC4C300B83EF6 /* PostView.swift in Sources */,
 				17321AD62AD266A900B83EF6 /* FotoView.swift in Sources */,
 				17764B962AE82C6000BA7EA0 /* PostService.swift in Sources */,
+				179F73C72AEBFBDC00FF001E /* UserService.swift in Sources */,
 				170B0FFE2AE96FC2001A0EB8 /* ProfileViewViewModel.swift in Sources */,
 				17321AB82ACB1A5E00B83EF6 /* VKNetologyApp.swift in Sources */,
 				17321AE92AD43A1200B83EF6 /* AuthService.swift in Sources */,

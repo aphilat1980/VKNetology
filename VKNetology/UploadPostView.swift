@@ -15,13 +15,16 @@ struct UploadPostView: View {
     @State private var caption = ""
     @State private var imagePickerPresented = false
     //@State private var photoItem: PhotosPickerItem?
-    @StateObject var viewModel: UploadPostViewModel
+    @StateObject var viewModel = UploadPostViewModel()
     @Binding var tabIndex: Int
     
-    init (user: User, tabIndex: Binding<Int>) {
+    /*init (user: User, tabIndex: Binding<Int>) {
         self._viewModel = StateObject(wrappedValue: UploadPostViewModel(user: user))
         self._tabIndex = tabIndex
-   }
+   }*/
+    
+    
+    
     
     
     var body: some View {
@@ -56,13 +59,14 @@ struct UploadPostView: View {
                         tabIndex = 0
                     }*/
                     viewModel.uploadPost(caption: caption) { success in
-                        if success == true {
-                            print ("--SUCCESS--")
+                        if success {
                             caption = ""
-                            print ("the caption is....\(caption)")
                             viewModel.selectedImage = nil
                             viewModel.postImage = nil
-                            //tabIndex = 0
+                            
+                            
+                            
+                            tabIndex = 0
                             
                         }
                     }

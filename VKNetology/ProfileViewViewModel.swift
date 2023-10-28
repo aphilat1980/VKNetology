@@ -21,7 +21,7 @@ class ProfileViewViewModel: ObservableObject {
     @MainActor
     func fetchUserPosts () async throws {
         
-        self.posts = try await PostService.fetchUserPosts(user: self.user)
+        self.posts = try await PostService.fetchUserPosts(uid: self.user.id)
         
     }
     

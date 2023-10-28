@@ -23,35 +23,38 @@ struct PostView: View {
                     CircularProfileImageView(user: user, dimension: 60)
                }
                 
-                if post.author.id != AuthService.shared.currentUser!.id {
+                
+                if let user = post.author {
                     
-                    NavigationLink {
-                        ProfileView(user: post.author)
-                    } label: {
+                    if user.id != AuthService.shared.currentUser!.id {
+                        
+                        NavigationLink {
+                            ProfileView(user: user)
+                        } label: {
+                            VStack (alignment: .leading) {
+                                Text (user.userName)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                Text (user.userProfession ?? "")
+                                    .foregroundColor(.black)
+                            }
+                            .padding(.leading)
+                        }
+                        
+                        
+                    } else {
                         VStack (alignment: .leading) {
-                            Text (post.author.userName)
+                            Text (user.userName)
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
-                            Text (post.author.userProfession ?? "")
+                            Text (user.userProfession ?? "")
                                 .foregroundColor(.black)
                         }
                         .padding(.leading)
                     }
-
                     
-                } else {
-                    VStack (alignment: .leading) {
-                        Text (post.author.userName)
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                        Text (post.author.userProfession ?? "")
-                            .foregroundColor(.black)
-                    }
-                    .padding(.leading)
+                    
                 }
-                
-                
-
                 
                 Spacer()
                 

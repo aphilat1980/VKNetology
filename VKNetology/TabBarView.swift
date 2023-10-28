@@ -30,7 +30,7 @@ struct TabBarView: View {
                 .tabItem {
                     Label("Профиль", systemImage: "person")
                 }.tag(1)
-            UploadPostView(user: user, tabIndex: $selectedIndex)
+            UploadPostView(tabIndex: $selectedIndex)
                 .onAppear{
                     selectedIndex = 2
                 }

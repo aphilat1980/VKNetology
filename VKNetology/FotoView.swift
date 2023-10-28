@@ -75,6 +75,7 @@ struct FotoView: View {
                                 .onTapGesture {
                                     deletingImageUrl = imageUrl
                                     deleteButtonPresented.toggle()
+                                    
                                 }
                                 
                                 

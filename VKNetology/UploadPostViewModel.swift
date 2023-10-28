@@ -17,15 +17,15 @@ class UploadPostViewModel: ObservableObject {
         didSet {Task {await loadImage(fromItem: selectedImage)}}
     }
     
-    @Published var user: User
+   // @Published var user: User
     
     @Published var postImage: Image?
     
     private var uiImage: UIImage?
     
-    init (user: User){
+    /*init (user: User){
         self.user = user
-    }
+    }*/
     
     func loadImage(fromItem item: PhotosPickerItem?) async {
         guard let item = item else {return}
@@ -58,7 +58,7 @@ class UploadPostViewModel: ObservableObject {
     
     func uploadPost (caption: String, completion: @escaping (_ success: Bool) -> Void) {
         
-        //guard let uid = Auth.auth().currentUser?.uid else { return }
+        guard let uid = Auth.auth().currentUser?.uid else { return }
         
         guard let uiImage = uiImage else {return}
         
@@ -67,11 +67,9 @@ class UploadPostViewModel: ObservableObject {
             if let imageURL = imageURL {
                 let postRef = Firestore.firestore().collection("posts").document()
                 
-                let post = Post(id: postRef.documentID, author: self.user, description: caption, postFoto: imageURL, postLikes: 0, postMessages: 0, postDate: Timestamp())
-                
+                let post = Post(id: postRef.documentID, ownerId: uid, description: caption, postFoto: imageURL, postLikes: 0, postMessages: 0, postDate: Timestamp())
                 guard let encodedPost = try? Firestore.Encoder().encode(post) else {return}
                 
-               //postRef.setData(encodedPost)
                 postRef.setData(encodedPost) {error in
                     if let error = error {
                         print ("error is \(error)")

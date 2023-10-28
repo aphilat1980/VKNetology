@@ -104,7 +104,7 @@ struct CurrentUserProfileView: View {
                     HStack {
                         
                         VStack {
-                            Text ("1400")
+                            Text ("\(viewModel.posts.count)")
                             Text("публикаций")
                                 .font(.footnote)
                         }
@@ -186,6 +186,7 @@ struct CurrentUserProfileView: View {
                                         .resizable()
                                         .scaledToFill()
                                         .frame(width: 72, height: 66, alignment: .top)
+                                        .padding(.horizontal)
                                         //.cornerRadius(10)
                                 }
                                 
@@ -200,6 +201,7 @@ struct CurrentUserProfileView: View {
                         
                         PostView(post: post)
                     }
+
                     
                 }
                 
@@ -210,7 +212,9 @@ struct CurrentUserProfileView: View {
         .fullScreenCover(isPresented: $showEditProfile) {
             EditProfileView(user: currentUser)
         }
-        
+        .onAppear {
+            Task {try await viewModel.fetchUserPosts()}
+        }
     }
         
         

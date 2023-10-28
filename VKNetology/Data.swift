@@ -26,8 +26,8 @@ struct User: Identifiable, Codable {
 struct Post: Identifiable, Codable {
     
     var id: String
-    var author: User
-    //var ownerId: String
+    var author: User?
+    var ownerId: String
     //?
     var description: String
     var postFoto: String
@@ -49,11 +49,11 @@ var users = [User(id: "1", userName: "Alex", userFoto: "alexFoto", userProfessio
 var storiesDatabase = [users[0], users[1], users[2]]
 
 
-var postsDatabase = [Post(id: "1", author: users[0], description: "fgfgfgfgfgfgfgfgfgfg fgfg hjhjhj hfgfhj gfgfgfgfg  ghghghghg  hjhjhjhj hjhjhjhj hjhjhjhjhj hjhjhjhjh hjhjhjhjhj hjhjhjhjhj hjhjhjhjh jhjhjhjhj hjhjhjhjhjh ghghghghgh ghghghghgh ghghghghgh ghghghgh ghghghghgh", postFoto: "post1Foto", postLikes: 10, postMessages: 20, postDate: Timestamp()),
+/*var postsDatabase = [Post(id: "1", author: users[0], description: "fgfgfgfgfgfgfgfgfgfg fgfg hjhjhj hfgfhj gfgfgfgfg  ghghghghg  hjhjhjhj hjhjhjhj hjhjhjhjhj hjhjhjhjh hjhjhjhjhj hjhjhjhjhj hjhjhjhjh jhjhjhjhj hjhjhjhjhjh ghghghghgh ghghghghgh ghghghghgh ghghghgh ghghghghgh", postFoto: "post1Foto", postLikes: 10, postMessages: 20, postDate: Timestamp()),
                      Post(id: "2", author: users[1], description: "fgfgfgfgfgfgfgfgfgfgfgfg", postFoto: "post2Foto", postLikes: 10, postMessages: 20, postDate: Timestamp()),
                      Post(id: "3", author: users[2], description: "fgfgfgfgfgfgfgfgfgfgfgfg", postFoto: "post1Foto", postLikes: 10, postMessages: 1000, postDate: Timestamp()),
                      Post(id: "4", author: users[1], description: "fgfgfgfgfgfgfgfgfgfgfgfg", postFoto: "post1Foto", postLikes: 10, postMessages: 20, postDate: Timestamp()),
-]
+]*/
 
                        
                        

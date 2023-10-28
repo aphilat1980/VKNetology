@@ -30,8 +30,15 @@ struct MainView: View {
                 }
             }
         }
+        .onAppear {
+            Task {try await viewModel.fetchPosts()}
+        }
+            
     }
+        
+
 }
+    
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
