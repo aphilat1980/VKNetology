@@ -52,5 +52,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "905EEDB5-90BE-4FED-98AD-5771E632D386"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKNetology/PostViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "fetchIfCurrentUserAlreadyLikesPost(completion:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "905EEDB5-90BE-4FED-98AD-5771E632D386 - 42612adc9ae091f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKNetology.PostViewModel.fetchIfCurrentUserAlreadyLikesPost() -&gt; Swift.Bool"
+                  moduleName = "VKNetology"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrfilatov/Documents/VKNetology/VKNetology/PostViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "905EEDB5-90BE-4FED-98AD-5771E632D386 - b45db684dc975840"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in VKNetology.PostViewModel.fetchIfCurrentUserAlreadyLikesPost() -&gt; Swift.Bool"
+                  moduleName = "VKNetology"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrfilatov/Documents/VKNetology/VKNetology/PostViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

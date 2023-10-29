@@ -46,6 +46,7 @@
 		17764B962AE82C6000BA7EA0 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17764B952AE82C6000BA7EA0 /* PostService.swift */; };
 		17764B982AE833C500BA7EA0 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17764B972AE833C500BA7EA0 /* CurrentUserProfileViewModel.swift */; };
 		179F73C72AEBFBDC00FF001E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F73C62AEBFBDC00FF001E /* UserService.swift */; };
+		179F73C92AECD5BA00FF001E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F73C82AECD5BA00FF001E /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		17764B952AE82C6000BA7EA0 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		17764B972AE833C500BA7EA0 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
 		179F73C62AEBFBDC00FF001E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		179F73C82AECD5BA00FF001E /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				17321AC52ACB203D00B83EF6 /* MainView.swift */,
 				1702B2042AE81B6100025839 /* FeedViewModel.swift */,
 				17321AD12ACDC4C300B83EF6 /* PostView.swift */,
+				179F73C82AECD5BA00FF001E /* PostViewModel.swift */,
 				1702B1992AE6AA8A00025839 /* UploadPostView.swift */,
 				1702B19B2AE6B4F600025839 /* UploadPostViewModel.swift */,
 				17764B952AE82C6000BA7EA0 /* PostService.swift */,
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179F73C92AECD5BA00FF001E /* PostViewModel.swift in Sources */,
 				1702B2052AE81B6100025839 /* FeedViewModel.swift in Sources */,
 				17321AD82AD2712D00B83EF6 /* RegisterView.swift in Sources */,
 				17321AF12AD446CE00B83EF6 /* RegistrationViewModel.swift in Sources */,

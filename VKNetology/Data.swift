@@ -31,7 +31,7 @@ struct Post: Identifiable, Codable {
     //?
     var description: String
     var postFoto: String
-    var postLikes: Int
+    var postLikes: [String]
     var postMessages: Int
     var hasBookmarked: Bool = false
     var postDate: Timestamp

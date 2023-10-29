@@ -12,7 +12,18 @@ struct PostView: View {
     
     var post: Post
     
+    @StateObject var viewModel: PostViewModel
+    
     @State var sheetIsPresented: Bool = false
+    
+    @State var isLiked: Bool = false
+    
+    @State var deltaLikes: Int = 0
+    
+    init (post: Post) {
+        self.post = post
+        self._viewModel = StateObject(wrappedValue: PostViewModel(post: post))
+    }
     
     var body: some View {
         
@@ -82,42 +93,48 @@ struct PostView: View {
                     .frame(height: 300, alignment: .top)
                     .clipped()
                 
-                /*if let imageUrl = post.postFoto {
-                    KFImage(URL(string: imageUrl))
-                        .resizable()
-                        .scaledToFill()
-                    //.frame(width:UIScreen.main.bounds.width-40, height: 250)
-                        .frame(height: 300, alignment: .top)
-                        .clipped()
-                    //.clipShape(RoundedRectangle(cornerRadius: 20))
-                    //.padding()
-                } else {
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .scaledToFill()
-                    //.frame(width:UIScreen.main.bounds.width-40, height: 250)
-                        .frame(height: 300, alignment: .top)
-                        .clipped()
-                }*/
-                
                 Text (post.description)
                         .padding(.horizontal)
                         .padding(.top, 10)
                         
-                    
-                   
-                
-                
                 
                 Divider()
                     .foregroundColor(.black)
                 
                 HStack {
-                    Image ("heart")
-                        .resizable()
-                        .frame(width: 20, height: 20)
                     
-                    Text ("\(post.postLikes)")
+                    if viewModel.isLiked {
+                                Button {
+                                    Task {try await viewModel.removeLike()}
+                                    viewModel.isLiked.toggle()
+                                    deltaLikes -= 1
+                                    //viewModel.fetchIfCurrentUserAlreadyLikedPost()
+                                    
+                                } label: {
+                                    Image (systemName: "heart.fill")
+                                        .resizable()
+                                        .frame(width: 20, height: 20)
+                                }
+                                
+                            } else {
+                                Button {
+                                    Task {try await viewModel.addLike()}
+                                    viewModel.isLiked.toggle()
+                                    deltaLikes += 1
+                                    //viewModel.fetchIfCurrentUserAlreadyLikedPost()
+                                } label: {
+                                    Image (systemName: "heart")
+                                        .resizable()
+                                        .frame(width: 20, height: 20)
+                                }
+                                
+                            }
+                            
+                    
+                    
+                    
+                        
+                    Text ("\(post.postLikes.count + deltaLikes)")
                     
                     Image ("message")
                         .resizable()
@@ -150,8 +167,14 @@ struct PostView: View {
             
         }
         .padding(.horizontal)
+        .onAppear {
+            viewModel.isLiked = false
+            viewModel.fetchIfCurrentUserAlreadyLikedPost()
+            deltaLikes = 0
+        }
         
     }
+    
 }
 
 /*struct PostView_Previews: PreviewProvider {
