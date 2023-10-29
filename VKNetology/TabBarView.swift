@@ -16,7 +16,7 @@ struct TabBarView: View {
         
         TabView (selection: $selectedIndex) {
             
-            MainView()
+            FeedView()
                 .onAppear{
                     selectedIndex = 0
                 }
@@ -38,13 +38,13 @@ struct TabBarView: View {
                     Label("Добавить пост", systemImage: "plus.app")
                 }.tag(2)
             
-           /* MainView()
+            SavedPostsView()
                 .onAppear{
                     selectedIndex = 3
                 }
                 .tabItem {
-                    Label("Сохраненные", image: "likeTab")
-                }.tag(3)*/
+                    Label("Сохраненные", systemImage: "bookmark")
+                }.tag(3)
         }
         .accentColor(.black)
         .navigationBarBackButtonHidden(true)
@@ -54,8 +54,8 @@ struct TabBarView: View {
     }
 }
 
-struct TabBarView_Previews: PreviewProvider {
+/*struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         TabBarView(user: users[0])
     }
-}
+}*/
