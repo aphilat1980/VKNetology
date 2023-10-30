@@ -34,4 +34,7 @@
 <img src ="https://github.com/aphilat1980/VKNetology/blob/master/UploadPostView.png" width="300">
 
 #### Экран сохраненных постов (SavedPostsView)
+<img src ="https://github.com/aphilat1980/VKNetology/blob/master/SavedPostsView.png" width="300">
+
+#### Экран профиля пользователя (ProfileView)
 
