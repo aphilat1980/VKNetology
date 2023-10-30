@@ -19,3 +19,6 @@
 <img src ="https://github.com/aphilat1980/VKNetology/blob/master/LoginView.png" width="300">
 
 #### Экран ленты постов (FeedView)
+<img src ="https://github.com/aphilat1980/VKNetology/blob/master/FeedView.png" width="300">
+
+#### Экран профиля текущего пользователя (CurrentUserProfileView)
