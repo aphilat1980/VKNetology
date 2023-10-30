@@ -28,3 +28,7 @@
 <img src ="https://github.com/aphilat1980/VKNetology/blob/master/EditProfileView.png" width="300">
 
 #### Экран фотографий пользователя (FotoView)
+<img src ="https://github.com/aphilat1980/VKNetology/blob/master/FotoView.png" width="300">
+
+#### Экран добавления нового поста (UploadPostView)
+
