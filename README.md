@@ -22,3 +22,6 @@
 <img src ="https://github.com/aphilat1980/VKNetology/blob/master/FeedView.png" width="300">
 
 #### Экран профиля текущего пользователя (CurrentUserProfileView)
+<img src ="https://github.com/aphilat1980/VKNetology/blob/master/CurrentUserProfileView.png" width="300">
+
+#### Экран редактирования данных пользователя (EditProfileView)
