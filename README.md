@@ -13,6 +13,7 @@
 Данный экран показывается при отсутствии авторизованного в приложении пользователя
 
 #### Экран регистрации нового пользователя (RegisterView)
-<img src="https://github.com/aphilat1980/VKNetology/blob/master/RegisterOrLoginView.png" width="300">
+<img src ="https://github.com/aphilat1980/VKNetology/blob/master/RegisterView.png" width="300">
 
+#### Экран авторизации существующего пользователя (LoginView)
 
