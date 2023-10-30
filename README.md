@@ -8,7 +8,11 @@
 - сохранение и отображение сохраненных постов
 
 ## Основные экраны приложения:
+#### Стартовый экран (RegisterOrLoginView)
+<img src="https://github.com/aphilat1980/VKNetology/blob/master/RegisterOrLoginView.png" width="300">
+Данный экран показывается при отсутствии авторизованного в приложении пользователя
+
+#### Экран регистрации нового пользователя (RegisterView)
+<img src="https://github.com/aphilat1980/VKNetology/blob/master/RegisterOrLoginView.png" width="300">
 
 
-
-  
