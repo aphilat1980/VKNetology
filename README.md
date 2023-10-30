@@ -37,4 +37,4 @@
 <img src ="https://github.com/aphilat1980/VKNetology/blob/master/SavedPostsView.png" width="300">
 
 #### Экран профиля пользователя (ProfileView)
-
+<img src ="https://github.com/aphilat1980/VKNetology/blob/master/ProfileView.png" width="300">
